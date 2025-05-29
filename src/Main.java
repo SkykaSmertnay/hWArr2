@@ -37,36 +37,14 @@ public class Main {
 
         System.out.println("Средняя сумма трат за месяц составила " + avarege + " рублей.");
         System.out.println("Задание № 4 ");
-        int spaceInd = 0;
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        // char[] reverseFullName = { 'a','t', 'e', 'v', 'S', ' ', 'a','v', 'o', 'n', 'a', 'v', 'I'};
-        for (char i : reverseFullName)
-        {
-            if (i == ' ')
-            {
-                break;
-            }
-            spaceInd++;
-        }
+        //char[] reverseFullName = { 'a','t', 'e', 'v', 'S', ' ', 'a','v', 'o', 'n', 'a', 'v', 'I'};
+
         char save;
-        int counter1 = 1;
-        int length = reverseFullName.length;
-        for (int i = 0; i < reverseFullName.length; i++)
-        {
-            if (i < spaceInd / 2)
-            {
-                save = reverseFullName[i];
-                reverseFullName[i] = reverseFullName[spaceInd - counter1];
-                reverseFullName[spaceInd - counter1] = save;
-                counter1++;
-            }
-            else if (spaceInd < i && i < (length - 1))
-            {
-                save = reverseFullName[i];
-                reverseFullName[i] = reverseFullName[length - 1];
-                reverseFullName[length-1] = save;
-                length--;
-            }
+        for (int i = 0; i < reverseFullName.length/2; i++){
+            save = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length - i - 1];
+            reverseFullName[reverseFullName.length - i - 1] = save;
         }
         for (char c : reverseFullName)
         {
