@@ -33,7 +33,7 @@ public class Main {
         System.out.println("Максимальная сумма трат за неделю составила " + max + " рублей.");
         System.out.println("Минимальная сумма трат за неделю составила " + min + " рублей.");
         System.out.println("Задание № 3 ");
-        float avarege = (float) (total / 4);
+        float avarege = (float) (total / spent.length);
 
         System.out.println("Средняя сумма трат за месяц составила " + avarege + " рублей.");
         System.out.println("Задание № 4 ");
